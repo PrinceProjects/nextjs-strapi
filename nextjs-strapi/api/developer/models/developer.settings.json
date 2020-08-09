@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "developers",
+  "info": {
+    "name": "Developer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Firstname": {
+      "type": "string"
+    },
+    "Lastname": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Employment_status": {
+      "type": "boolean"
+    },
+    "Experience": {
+      "type": "integer"
+    },
+    "Profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "company": {
+      "via": "developers",
+      "model": "company"
+    }
+  }
+}
