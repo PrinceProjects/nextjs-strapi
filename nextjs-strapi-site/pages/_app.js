@@ -1,4 +1,13 @@
+import '../styles/normalize.css'
 import '../styles/globals.css'
+
+import { ThemeProvider } from 'emotion-theming'
+
+const theme = {
+	colors: {
+		primary: '#ff0000'
+	}
+}
 
 // import Header from '../components/Header'
 // Or,
@@ -8,8 +17,10 @@ import Header from 'components/Header'
 function MyApp({ Component, pageProps }) {
   return (
   	<>
-  		<Header/>
-  		<Component {...pageProps} />
+  		<ThemeProvider theme={theme}>
+  			<Header/>
+  			<Component {...pageProps} />
+  		</ThemeProvider>		
   	</>
   )
 }
