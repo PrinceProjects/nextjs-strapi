@@ -1,12 +1,21 @@
-// import styles from '../styles/Home.module.css'
+import React from 'react'
+import {
+  signIn, 
+  signOut,
+  useSession
+} from 'next-auth/client'
 
-export default function Home() {
-  return (
-    // <div className={styles.container}>
-    <div className="container">
-      
-      <h1> This is our front page </h1>
-      
-    </div>
-  )
+export default function myComponent() {
+  const [ session, loading ] = useSession()
+
+  return <>
+    {!session && <>
+      Not signed in <br/>
+      <button onClick={signIn}>Sign in</button>
+    </>}
+    {session && <>
+      Signed in as {session.user.email} <br/>
+      <button onClick={signOut}>Sign out</button>
+    </>}
+  </>
 }
