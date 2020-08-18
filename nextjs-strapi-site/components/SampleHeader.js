@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-function Header() {
+function sampleHeader() {
 	return (
 		<HeaderStyled>
 			<div className="logo">
@@ -15,4 +15,4 @@ const HeaderStyled = styled.header`
 	background: ${props => props.theme.colors.primary};
 `
 
-export default Header;
+export default sampleHeader;
