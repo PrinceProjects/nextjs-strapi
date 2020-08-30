@@ -9,7 +9,20 @@
 	left: 0;
 	color: black;
 	z-index: 200;
+	/*animation-name: slideout;
+	animation-duration: 0.5s;*/
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-out;
 }
+
+/*@keyframes slideout {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 70%
+	}
+}*/
 
 .side_drawer ul {
 	list-style-type: none;

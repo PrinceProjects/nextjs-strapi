@@ -1,11 +1,12 @@
 import styles from './SideDrawer.module.css';
 
 const sideDrawer = (props) => {
-	if (!props.show){
-		return null
+	let drawerClasses = ''
+	if (props.show) {
+		drawerClasses = 'open'
 	}
 	return (
-		<nav className={styles.side_drawer}>
+		<nav className={`${styles.side_drawer} ${drawerClasses}`}>
 			<ul>
 				<li>
 					<a href="/">Home</a>
@@ -13,7 +14,12 @@ const sideDrawer = (props) => {
 				<li>
 					<a href="/about">About</a>
 				</li>
-			</ul> 
+			</ul>
+			<style jsx>{`
+				.open {
+					transform: translateX(0);
+				}
+			`}</style> 
 		</nav>
 	);
 }
