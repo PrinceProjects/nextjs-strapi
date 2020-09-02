@@ -2,7 +2,7 @@
 
 This is just me trying to get familier with Next.js & Strapi, and combine them to make a full stack app.
 
-#### [Live App](https://nextjs-strapi-weld.vercel.app/)
+#### [Live App](https://next-exps.prk.vercel.app/)
 
 ### Things Achieved so far
 
